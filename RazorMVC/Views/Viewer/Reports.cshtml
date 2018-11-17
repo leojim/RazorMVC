@@ -1,0 +1,27 @@
+﻿@using System.Web.UI.WebControls
+@using Stimulsoft.Report.Mvc
+@using Stimulsoft.Report.Web
+@{
+    ViewBag.Title = "Stimulsoft Reports.Web.Demo";
+}
+@Html.Stimulsoft().StiMvcViewer("StiMvcViewer1", new StiMvcViewerOptions()
+{
+    Actions =
+    {
+        GetReport = "GetReport",
+        ViewerEvent = "ViewerEvent",
+        DesignReport = "Designer"
+    },
+    Appearance =
+    {
+        BackgroundColor = System.Drawing.Color.FromArgb(0xe8, 0xe8, 0xe8),
+        ScrollbarsMode = true
+    },
+    Toolbar =
+    {
+        DisplayMode = StiToolbarDisplayMode.Separated,
+        ShowDesignButton = true
+    },
+    Width = Unit.Percentage(100),
+    Height = Unit.Percentage(100)
+})
